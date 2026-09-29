@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+:root {
+  font-family:'DM Sans',Arial,sans-serif;
+  color:#111b17;
+  background:#0b1b14;
+  font-synthesis:none;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  font-optical-sizing:auto;
+  font-weight:400;
+  font-size:16px
+}
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0;
+  min-width:320px;
+  min-height:100vh
+}
+.page-shell {
+  width:min(100% - 96px,1880px);
+  margin:0 auto;
+  padding:68px 0 72px
+}
+.topbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:42px
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:22px;
+  color:#f6f3e8;
+  text-decoration:none
+}
+.brand-icon {
+  font-size:38px;
+  line-height:1;
+  filter:saturate(1.15)
+}
+.brand strong {
+  display:block;
+  font-size:30px;
+  line-height:1.15;
+  font-weight:750;
+  letter-spacing:-.7px
+}
+.brand small {
+  display:block;
+  margin-top:4px;
+  color:#93a49a;
+  font:14px 'DM Mono',monospace
+}
+.tech-pills {
+  display:flex;
+  gap:12px
+}
+.tech-pills span {
+  padding:9px 18px;
+  border-radius:999px;
+  color:#d2a530;
+  background:#302c16;
+  font-size:14px;
+  font-weight:700
+}
+.dashboard {
+  display:grid;
+  grid-template-columns:minmax(300px,.39fr) minmax(0,1fr);
+  gap:34px;
+  align-items:stretch
+}
+.sidebar {
+  min-height:680px;
+  padding:36px 34px;
+  background:#174634;
+  border-radius:24px;
+  color:#eef4e9
+}
+.eyebrow {
+  margin:0 0 24px;
+  color:#9fc3b0;
+  font-size:14px;
+  line-height:1.2;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:700
+}
+.profile {
+  display:flex;
+  gap:16px;
+  align-items:center;
+  padding:20px 18px;
+  background:#24533f;
+  border-radius:17px
+}
+.avatar {
+  display:grid;
+  place-items:center;
+  flex:0 0 58px;
+  height:58px;
+  border-radius:50%;
+  background:#c89d2e;
+  color:#102016;
+  font-weight:800;
+  font-size:19px
+}
+.profile-inputs {
+  display:grid;
+  min-width:0;
+  gap:3px
+}
+.profile-inputs input {
+  width:100%;
+  min-width:0;
+  padding:0;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:#f6f3e8;
+  font:700 16px 'DM Sans',sans-serif
+}
+.profile-inputs input:last-child {
+  font-size:13px;
+  font-weight:400;
+  color:#bed0c2
+}
+.new-note {
+  margin-top:30px
+}
+.new-note form {
+  display:grid;
+  gap:12px
+}
+.new-note label {
+  margin-top:0;
+  color:#9fc3b0;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.7px
+}
+.new-note form>input {
+  height:52px;
+  padding:0 16px;
+  border:1px solid #426551;
+  border-radius:10px;
+  outline:none;
+  background:#102f23;
+  color:#f6f3e8;
+  font:16px 'DM Sans',sans-serif
+}
+.new-note form>input:focus {
+  border-color:#c99e31;
+  box-shadow:0 0 0 3px #c99e3128
+}
+.new-note form>input::placeholder {
+  color:#8da699
+}
+.new-note form>button {
+  height:52px;
+  margin-top:4px;
+  border:0;
+  border-radius:10px;
+  background:#c99e31;
+  color:#112118;
+  font:700 16px 'DM Sans',sans-serif;
+  cursor:pointer;
+  transition:background .15s,transform .15s
+}
+.new-note form>button:hover {
+  background:#dbb13f;
+  transform:translateY(-1px)
+}
+.notes-panel {
+  min-width:0;
+  padding:34px 38px 28px;
+  border-radius:24px;
+  background:#f4f1e8
+}
+.notes-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-bottom:26px
+}
+.notes-heading h1 {
+  margin:0;
+  color:#111b17;
+  font-size:25px;
+  letter-spacing:-.4px
+}
+.notes-meta {
+  color:#7e8982;
+  font:13px 'DM Mono',monospace;
+  text-align:right
+}
+.note-list {
+  display:grid;
+  gap:15px;
+  list-style:none;
+  margin:0;
+  padding:0
+}
+.note-card {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+  min-height:91px;
+  padding:20px 24px;
+  border:1px solid #e1e3de;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 1px 2px #17251b0a
+}
+.note-card h2 {
+  margin:0;
+  color:#18211d;
+  font-size:19px;
+  line-height:1.35;
+  font-weight:700
+}
+.note-card p {
+  margin:2px 0 0;
+  color:#8a948e;
+  font:13px 'DM Mono',monospace
+}
+.delete-button {
+  flex-shrink:0;
+  padding:2px 0;
+  border:0;
+  background:none;
+  color:#98522d;
+  font:600 15px 'DM Sans',sans-serif;
+  cursor:pointer
+}
+.delete-button:hover {
+  color:#71391e;
+  text-decoration:underline
+}
+.api-flow {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:27px;
+  padding:17px 22px;
+  border-radius:14px;
+  background:#0c1b14;
+  color:#84a993;
+  font:13px 'DM Mono',monospace
+}
+.api-flow span {
+  color:#c99e31;
+  font-weight:500
+}
+.api-flow b {
+  color:#5d826c;
+  font-weight:400
+}
+.empty-state {
+  display:grid;
+  justify-items:center;
+  text-align:center;
+  padding:70px 20px;
+  color:#7d8982
+}
+.empty-state>span {
+  color:#c99e31;
+  font-size:30px
+}
+.empty-state h2 {
+  margin:12px 0 3px;
+  color:#1b2c23;
+  font-size:20px
+}
+.empty-state p {
+  margin:0;
+  font-size:14px
+}
+@media(max-width:900px) {
+  .page-shell {
+    width:min(100% - 48px,720px);
+    padding:38px 0
+  }
+  .dashboard {
+    grid-template-columns:1fr;
+    gap:20px
+  }
+  .sidebar {
+    min-height:0;
+    padding:28px
+  }
+  .new-note {
+    margin-top:26px
+  }
+  .notes-panel {
+    padding:28px
+  }
+  .topbar {
+    margin-bottom:28px
+  }
+}
+@media(max-width:560px) {
+  .page-shell {
+    width:calc(100% - 28px);
+    padding:24px 0
+  }
+  .topbar {
+    align-items:flex-start;
+    gap:16px
+  }
+  .brand {
+    gap:12px
+  }
+  .brand-icon {
+    font-size:30px
+  }
+  .brand strong {
+    font-size:24px
+  }
+  .brand small {
+    font-size:11px
+  }
+  .tech-pills {
+    gap:5px;
+    flex-wrap:wrap;
+    justify-content:flex-end
+  }
+  .tech-pills span {
+    padding:7px 9px;
+    font-size:10px
+  }
+  .sidebar {
+    padding:24px 20px;
+    border-radius:18px
+  }
+  .notes-panel {
+    padding:22px 16px;
+    border-radius:18px
+  }
+  .notes-heading {
+    align-items:flex-start;
+    flex-direction:column;
+    gap:6px;
+    margin-bottom:18px
+  }
+  .notes-heading h1 {
+    font-size:23px
+  }
+  .notes-meta {
+    text-align:left;
+    font-size:11px
+  }
+  .note-card {
+    min-height:78px;
+    padding:16px;
+    gap:10px
+  }
+  .note-card h2 {
+    font-size:16px
+  }
+  .note-card p {
+    font-size:11px
+  }
+  .delete-button {
+    font-size:13px
+  }
+  .api-flow {
+    gap:6px;
+    margin-top:20px;
+    padding:14px;
+    font-size:10px
+  }
+}
+
